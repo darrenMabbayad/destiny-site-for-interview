@@ -84,7 +84,7 @@ function App() {
             <div>
               <button name='toggle-nav' onClick={handleClick} className='header-modal-overlay'></button>
               <div className='header-modal'>
-                <Link className='header-modal-buttons' to='/fundamentals' target='_blank' rel="noopener noreferrer">
+                <Link className='header-modal-buttons' to='/fundamentals'>
                   <button 
                     name='toggle-nav' 
                     onClick={handleClick} 
@@ -94,7 +94,7 @@ function App() {
                     <FontAwesomeIcon className='header-modal-icon' icon={faBook} size='4x'color='black'/>
                   </button>
                 </Link>
-                <Link className='header-modal-buttons' to='/exotics' target='_blank' rel="noopener noreferrer">
+                <Link className='header-modal-buttons' to='/exotics'>
                   <button 
                     name='toggle-nav' 
                     onClick={handleClick} 
@@ -104,7 +104,7 @@ function App() {
                     <FontAwesomeIcon className='header-modal-icon' icon={faTools} size='4x'color='black'/>
                   </button>
                 </Link>
-                <Link className='header-modal-buttons' to='/builds' target='_blank' rel="noopener noreferrer">
+                <Link className='header-modal-buttons' to='/builds'>
                   <button 
                     name='toggle-nav' 
                     onClick={handleClick} 
@@ -114,7 +114,7 @@ function App() {
                     <FontAwesomeIcon className='header-modal-icon' icon={faHammer} size='4x'color='black'/>
                   </button>
                 </Link>
-                <Link className='header-modal-buttons' to='/trials' target='_blank' rel="noopener noreferrer">
+                <Link className='header-modal-buttons' to='/trials'>
                   <button 
                     name='toggle-nav' 
                     onClick={handleClick} 

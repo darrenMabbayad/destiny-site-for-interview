@@ -17,9 +17,9 @@ function Footer() {
                 <div className='footer-content'>
                     <h3 className='footer-heading'>Navigation</h3>
                     <ul>
-                        <Link to='/accredidation' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Accredidation</li></Link>
-                        <Link to='/about' target='_blank' rel="noopener noreferrer"><li className='footer-link'>About Us</li></Link>
-                        <Link to='/reviews' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Reviews</li></Link>
+                        <Link to='/accredidation'><li className='footer-link'>Accredidation</li></Link>
+                        <Link to='/about'><li className='footer-link'>About Us</li></Link>
+                        <Link to='/reviews'><li className='footer-link'>Reviews</li></Link>
                         <li>
                             <a 
                                 className='footer-link'
@@ -45,10 +45,10 @@ function Footer() {
                 <div className='footer-content'>
                     <h3 className='footer-heading'>Guardian School</h3>
                     <ul>
-                        <Link to='/fundamentals' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Fundamentals</li></Link>
-                        <Link to='/exotics' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Gear and Exotics</li></Link>
-                        <Link to='/builds' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Builds</li></Link>
-                        <Link to='/builds' target='_blank' rel="noopener noreferrer"><li className='footer-link'>Trials of Osiris</li></Link>
+                        <Link to='/fundamentals'><li className='footer-link'>Fundamentals</li></Link>
+                        <Link to='/exotics'><li className='footer-link'>Gear and Exotics</li></Link>
+                        <Link to='/builds'><li className='footer-link'>Builds</li></Link>
+                        <Link to='/builds'><li className='footer-link'>Trials of Osiris</li></Link>
                     </ul>
                 </div>           
             </div>
