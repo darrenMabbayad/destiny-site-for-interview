@@ -409,7 +409,7 @@ footer::before {
      object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 40%;
+  opacity: 0.6;
 }
 
 .home-hero-block {
@@ -533,7 +533,7 @@ footer::before {
      object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 40%;
+  opacity: 0.6;
 }
 
 .about-hero-text {
@@ -770,7 +770,7 @@ footer::before {
      object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 40%;
+  opacity: 0.6;
 }
 
 .reviews-hero-text {
