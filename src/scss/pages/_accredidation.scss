@@ -1,0 +1,70 @@
+.accredidation {
+    margin: 4em auto; 
+    width: 75%;
+
+    &-heading {
+        margin: 0 auto 2rem auto;
+        text-align: center;
+    }
+
+    &-text {
+        margin: 0 auto 2rem auto;
+        width: 50%;
+    }
+
+    &-link {
+        color: var(--clr-white);
+        white-space: normal;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        margin: 0 0.3rem;
+
+        &:hover {
+            color: var(--clr-accent)
+        }
+    }
+
+    &-member {
+        margin: 4em auto;
+        position: relative;
+
+        &-name {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        &-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: solid var(--clr-white) 2px;
+            margin: 0 auto 1rem auto;
+        }
+
+        &-links {
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            li {
+                list-style-type: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            border: solid var(--clr-accent) 1px;
+            width: 15%;
+            bottom: -1.75rem;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+    }
+}

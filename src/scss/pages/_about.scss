@@ -1,0 +1,208 @@
+.about {
+    &-hero {
+        margin: 0 0 4em 0;
+        height: 700px;
+        width: 100%;
+        position: relative;
+
+        &-image {
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 40%;
+        }
+
+        &-text {
+            width: 65%;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-intro {
+        margin: 0 auto 4em auto;
+        width: 100%;
+        height: 800px;
+        position: relative;
+
+        &-image {
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 60%;
+        }
+
+        &-block {
+            width: 75%;
+            height: 50%;
+            background-color: rgba(0,0,0,0.7);
+            border: solid var(--clr-white) 2px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        &-heading {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: left;
+            color: var(--clr-accent);
+        }
+
+        &-text {
+            display: flex;
+            justify-content: space-between;
+
+            &-subheading {
+                text-align: left;
+                font-weight: 900;
+                font-size: 2.5rem;
+                margin-right: 1em;
+            }
+
+            &-block {
+                &-p {
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    &-principles {
+        margin: 4em 0;
+
+        &-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &-cards {
+            width: 70%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    &-team {
+        margin: 0 0 4em 0;
+        background-color: var(--clr-white);
+        color: var(--clr-black);
+        padding-top: 2rem;
+        position: relative;
+
+        &-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+            z-index: 1000;
+        }
+
+        &-info {
+            margin: 0 auto;
+            display: grid;
+            width: 75%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            &-member {
+                &-name {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    z-index: 1000;
+                }
+
+                &-logo {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    border: solid var(--clr-white) 2px;
+                    margin: 0 auto 1rem auto;
+                    box-shadow: 3px 6px 5px 6px rgba(0,0,0,0.1),
+                                1px 1px 2px 2px rgba(0,0,0,0.2);
+                }
+
+                &-description {
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    color: var(--clr-accent);
+                    z-index: 1000;
+                }
+
+                &-links {
+                    text-align: center;
+                    width: 50%;
+                    margin: 0 auto 2rem auto;
+                    z-index: 1000;
+
+                    ul {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                    }
+
+                    li {
+                        list-style-type: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-white);
+        position: relative;
+
+        &-text {
+            color: var(--clr-black);
+
+            &-block {
+                width: 25%;
+                margin-right: 2rem;
+            }
+        }
+
+        &-embed {
+            margin: 4em 0;
+            z-index: 1000;
+        }
+    }
+}
+
+.team-socials-icon {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s linear;
+
+    &:hover {
+        transform: scale(1.2);
+        color: var(--clr-accent);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-video {
+        flex-direction: column;
+
+        &-text-block {
+            margin: 2rem auto 0 auto;
+            width: 80%;
+        }
+    }
+}

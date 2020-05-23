@@ -1,0 +1,42 @@
+.reviews {
+    &-hero {
+        margin: 0 0 4em 0;
+        height: 700px;
+        width: 100%;
+        position: relative;
+
+        &-image {
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 40%;
+        }
+        
+        &-text {
+            width: 65%;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &-heading {
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            &-subheading {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &-slides {
+        width: 75%;
+        margin: 4em auto;
+        border: solid var(--clr-accent) 2px;
+        padding: 0 1em;
+    }
+}

@@ -1,0 +1,16 @@
+.generic-btn {
+    font-size: 1.5rem;
+    font-weight: 900;
+    border: none;
+    text-transform: uppercase;
+    margin: 0.5em;
+    padding: 0.25em 1.25em;
+    border-radius: 5px;
+    background-color: var(--clr-white);
+    cursor: pointer;
+    transition: transform 0.1s linear;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

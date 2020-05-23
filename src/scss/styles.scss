@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap');
+@import './config/config';
+@import './components/header';
+@import './components/footer';
+@import './components/button';
+@import './components/card';
+@import './components/slide';
+@import './courses/fundamentals';
+@import './courses/exotics';
+@import './courses/builds';
+@import './courses/trials';
+@import './pages/home';
+@import './pages/about';
+@import './pages/reviews';
+@import './pages/accredidation';
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--clr-body);
+    color: var(--clr-white);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+p { font-size: var(--fs-body) }

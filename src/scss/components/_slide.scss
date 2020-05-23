@@ -1,0 +1,39 @@
+.slide {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 4em 0;
+
+    &-image {
+        width: 35%;
+
+        &-src {
+            object-fit: cover;
+        }
+    }
+
+    &-text {
+        width: 55%;
+        position: relative;
+
+        &-heading {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        &-description {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            border-top: solid var(--clr-accent) 1px;
+            width: 50%;
+            position: absolute;
+            bottom: -1.75rem;
+        }
+    }
+}
