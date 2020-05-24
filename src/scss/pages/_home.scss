@@ -124,7 +124,7 @@
 
         &-block {
             margin: 0 auto;
-            max-width: 80%;
+            max-width: 60%;
         }
         
         &-embed {
@@ -133,6 +133,13 @@
             top: 0;
             height: 100%;
             width: 100%;
+            border: solid var(--clr-accent) 2px;
         }
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .home-video-block {
+        max-width: 90%;
     }
 }
