@@ -25,26 +25,14 @@ function App() {
 
   function handleClick(event) {
     const { name } = event.target
-    console.log(event.target)
 
     if (name === 'toggle-nav') {
       setToggleNav(prev => !prev)
-      console.log(toggleNav)
-      if (!toggleNav) document.body.style.overflow = 'unset'
+      if (toggleNav) document.body.style.overflow = 'unset'
       else document.body.style.overflow = 'hidden'
     }
 
     return
-  }
-
-  function openModal() {
-    setToggleNav(prev => !prev)
-    document.body.style.overflow = 'hidden'
-  }
-
-  function closeModal() {
-    setToggleNav(prev => !prev)
-    document.body.style.overflow = 'unset'
   }
 
   return (
