@@ -172,13 +172,17 @@
         background-color: var(--clr-white);
         position: relative;
 
+        &-container {
+            border: solid var(--clr-accent) 2px;
+            width: 50%;
+        }
         
         &-block {
             overflow: hidden;
             padding-bottom: 56.25%;
             position: relative;
             height: 0;
-            width: 75%;
+            width: 100%;
         }
         
         &-embed {
@@ -227,10 +231,18 @@
 
         &-video {
             flex-direction: column;
+
+            &-container {
+                width: 90%;
+            }
     
-            &-text-block {
-                margin: 2rem auto 0 auto;
-                width: 80%;
+            &-text {
+                text-align: center;
+
+                &-block {
+                    margin: 2rem auto 0 auto;
+                    width: 80%;
+                }
             }
         }
     }

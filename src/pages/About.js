@@ -69,17 +69,19 @@ function About() {
                         Here's an example of what we offer at HunterMains.
                     </h2>
                 </div>
-                <div className='about-video-block'>
-                    <iframe
-                        className='about-video-embed'
-                        width="800" 
-                        height="450" 
-                        src="https://www.youtube.com/embed/l-BhM2Al1Yg" 
-                        frameBorder="0" 
-                        //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowFullScreen
-                        title='about-embed'
-                    />
+                <div className='about-video-container'>
+                    <div className='about-video-block'>
+                        <iframe
+                            className='about-video-embed'
+                            width="800" 
+                            height="450" 
+                            src="https://www.youtube.com/embed/l-BhM2Al1Yg" 
+                            frameBorder="0" 
+                            //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                            title='about-embed'
+                        />
+                    </div>
                 </div>
             </div>
 

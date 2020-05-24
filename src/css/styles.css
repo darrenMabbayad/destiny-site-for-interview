@@ -813,12 +813,17 @@ footer::before {
   position: relative;
 }
 
+.about-video-container {
+  border: solid var(--clr-accent) 2px;
+  width: 50%;
+}
+
 .about-video-block {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
-  width: 75%;
+  width: 100%;
 }
 
 .about-video-embed {
@@ -868,6 +873,12 @@ footer::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .about-video-container {
+    width: 90%;
+  }
+  .about-video-text {
+    text-align: center;
   }
   .about-video-text-block {
     margin: 2rem auto 0 auto;
