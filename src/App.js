@@ -16,27 +16,34 @@ import { faBook } from '@fortawesome/free-solid-svg-icons'
 import { faTools } from '@fortawesome/free-solid-svg-icons'
 import { faHammer } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
+import useWindowDimensions from './utils/useWindowDimensions'
 
 function App() {
   const [toggleNav, setToggleNav] = useState(false)
+  const width = useWindowDimensions()
+  const modalIconSize = '3x'
 
   function handleClick(event) {
     const { name } = event.target
+    console.log(event.target)
 
     if (name === 'toggle-nav') {
-      !toggleNav ? openModal() : closeModal()
+      setToggleNav(prev => !prev)
+      console.log(toggleNav)
+      if (!toggleNav) document.body.style.overflow = 'unset'
+      else document.body.style.overflow = 'hidden'
     }
 
     return
   }
 
   function openModal() {
-    setToggleNav(true)
+    setToggleNav(prev => !prev)
     document.body.style.overflow = 'hidden'
   }
 
   function closeModal() {
-    setToggleNav(false)
+    setToggleNav(prev => !prev)
     document.body.style.overflow = 'unset'
   }
 
@@ -84,51 +91,79 @@ function App() {
             <div>
               <button name='toggle-nav' onClick={handleClick} className='header-modal-overlay'></button>
               <div className='header-modal'>
-                <Link className='header-modal-buttons' to='/fundamentals'>
-                  <button 
-                    name='toggle-nav' 
-                    onClick={handleClick} 
-                    className='header-modal-sections'
-                  >
-                    <p className='header-modal-link'>Fundamentals</p>
-                    <FontAwesomeIcon className='header-modal-icon' icon={faBook} size='4x'color='black'/>
-                  </button>
-                </Link>
-                <Link className='header-modal-buttons' to='/exotics'>
-                  <button 
-                    name='toggle-nav' 
-                    onClick={handleClick} 
-                    className='header-modal-sections'
-                  >
-                    <p className='header-modal-link'>Gear and Exotics</p>
-                    <FontAwesomeIcon className='header-modal-icon' icon={faTools} size='4x'color='black'/>
-                  </button>
-                </Link>
-                <Link className='header-modal-buttons' to='/builds'>
-                  <button 
-                    name='toggle-nav' 
-                    onClick={handleClick} 
-                    className='header-modal-sections'
-                  >
-                    <p className='header-modal-link'>Builds</p>
-                    <FontAwesomeIcon className='header-modal-icon' icon={faHammer} size='4x'color='black'/>
-                  </button>
-                </Link>
-                <Link className='header-modal-buttons' to='/trials'>
-                  <button 
-                    name='toggle-nav' 
-                    onClick={handleClick} 
-                    className='header-modal-sections'
-                  >
-                    <p className='header-modal-link'>Trials of Osiris</p>
-                    <FontAwesomeIcon className='header-modal-icon' icon={faEye} size='4x'color='black'/>
-                  </button>
-                </Link>
+                <div className='header-modal-block'>
+                  {
+                    width < 900 ? 
+                    (
+                      <>
+                        <Link className='header-modal-buttons' to='/about'>
+                          <button 
+                            name='toggle-nav' 
+                            onClick={event => handleClick(event)} 
+                            className='header-modal-sections'
+                          >
+                            <p className='header-modal-link'>About</p>
+                            <FontAwesomeIcon className='header-modal-icon' icon={faBook} size={modalIconSize}color='black'/>
+                          </button>
+                        </Link>
+                        <Link className='header-modal-buttons' to='/reviews'>
+                          <button 
+                            name='toggle-nav' 
+                            onClick={event => handleClick(event)} 
+                            className='header-modal-sections'
+                          >
+                            <p className='header-modal-link'>Reviews</p>
+                            <FontAwesomeIcon className='header-modal-icon' icon={faBook} size={modalIconSize}color='black'/>
+                          </button>
+                        </Link>
+                      </>
+                    ) : null
+                  }
+                  <Link className='header-modal-buttons' to='/fundamentals'>
+                    <button 
+                      name='toggle-nav' 
+                      onClick={handleClick} 
+                      className='header-modal-sections'
+                    >
+                      <p className='header-modal-link'>Fundamentals</p>
+                      <FontAwesomeIcon className='header-modal-icon' icon={faBook} size={modalIconSize}color='black'/>
+                    </button>
+                  </Link>
+                  <Link className='header-modal-buttons' to='/exotics'>
+                    <button 
+                      name='toggle-nav' 
+                      onClick={handleClick} 
+                      className='header-modal-sections'
+                    >
+                      <p className='header-modal-link'>Gear and Exotics</p>
+                      <FontAwesomeIcon className='header-modal-icon' icon={faTools} size={modalIconSize}color='black'/>
+                    </button>
+                  </Link>
+                  <Link className='header-modal-buttons' to='/builds'>
+                    <button 
+                      name='toggle-nav' 
+                      onClick={handleClick} 
+                      className='header-modal-sections'
+                    >
+                      <p className='header-modal-link'>Builds</p>
+                      <FontAwesomeIcon className='header-modal-icon' icon={faHammer} size={modalIconSize}color='black'/>
+                    </button>
+                  </Link>
+                  <Link className='header-modal-buttons' to='/trials'>
+                    <button 
+                      name='toggle-nav' 
+                      onClick={handleClick} 
+                      className='header-modal-sections'
+                    >
+                      <p className='header-modal-link'>Trials of Osiris</p>
+                      <FontAwesomeIcon className='header-modal-icon' icon={faEye} size={modalIconSize}color='black'/>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>, document.getElementById('modal')) : null
         }
       </Layout>
-
     </div>
   );
 }

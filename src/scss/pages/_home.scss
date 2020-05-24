@@ -1,19 +1,20 @@
 .home {
     &-hero {
-        margin: 0 0 4em 0;
-        height: 700px;
         width: 100%;
         position: relative;
+        background-color: var(--clr-blue);
 
         &-image {
             background-repeat: no-repeat;
             object-fit: cover;
-            height: 100%;
+            height: auto;
+            max-height: 700px;
             width: 100%;
             opacity: 0.6;
         }
 
         &-block {
+            width: 90%;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -21,9 +22,11 @@
         }
 
         &-text {
-            width: 80%;
+            width: 65%;
             margin: 0 auto;
             text-align: center;
+            font-size: calc(20px + (52 - 14) * ((100vw - 300px) / (1600 - 300)));
+            text-transform: uppercase;
         }
 
         &-btn {
@@ -35,39 +38,57 @@
     }
 
     &-intro {
-        margin: 4em 0;
-
-        margin: 0 auto 4em auto;
+        border-right: solid var(--clr-accent) 2px;
+        margin: auto;
         width: 70%;
+        
+        &-block {
+            background-color: var(--clr-blue);
+            width: 100%;
+            padding: 4em 0;
+        }
+
         &-heading {
             width: 80%;
-            margin: 0.5rem 0 4rem 0;
+            margin-bottom: 3em;
             text-align: left;
+            font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
         }
 
         &-subheading, &-text {
             width: 80%;
             text-align: left;
+            font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        &-subheading {
+            margin-bottom: 1rem;
         }
     }
 
     &-stats {
-        margin: 0 auto 2rem auto;
-        width: 80%;
+        margin: 0 auto;
+        width: 65%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        
+        &-block {
+            background-color: var(--clr-blue);
+            width: 100%;
+        }
 
         &-text {
-            font-size: 1.5rem;
+            width: 100%;
+            font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
             text-align: center;
             white-space: pre-line;
-            margin-bottom: 1em;
+            margin: 0 auto 3em auto;
         }
 
         &-strong {
             color: var(--clr-accent);
             text-transform: uppercase;
-            font-size: 2rem;
+            font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
         }
     }
 
@@ -79,6 +100,8 @@
         }
 
         &-subheading {
+            width: 80%;
+            margin: 0 auto;
             text-align: center;
             margin-bottom: 2rem;
             color: var(--clr-black);
@@ -88,19 +111,28 @@
             width: 80%;
             margin: 0 auto 2rem auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1em;
         }
     }
 
     &-video {
-        background-color: var(--clr-white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+
+        &-block {
+            margin: 0 auto;
+            max-width: 80%;
+        }
         
         &-embed {
-            margin: 4rem 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
         }
     }
 }

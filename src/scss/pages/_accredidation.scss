@@ -1,10 +1,19 @@
 .accredidation {
-    margin: 4em auto; 
-    width: 75%;
+    margin: 0 auto; 
+    width: 100%;
+    background-color: var(--clr-blue);
+
+    &-block {
+        margin: 0 auto;
+        padding: 2rem 0;
+        width: 80%;
+        border: solid var(--clr-accent) 2px;
+    }
 
     &-heading {
         margin: 0 auto 2rem auto;
         text-align: center;
+        width: 80%;
     }
 
     &-text {
@@ -66,5 +75,11 @@
             transform: translateX(-50%);
             left: 50%;
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .accredidation-text {
+        width: 80%;
     }
 }

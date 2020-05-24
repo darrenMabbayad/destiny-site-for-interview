@@ -1,16 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useWindowDimensions from '../utils/useWindowDimensions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Header({ handleClick }) {
+    const width = useWindowDimensions();
+    const navClass = width > 899 ? 'nav-links' : 'nav-links nav-mobile'
+    const menuToggleClass = width > 899 ? 'menu-toggle nav-desktop' : 'menu-toggle'
+    const menuIconSize = '2x'
+    const menuIcon = <FontAwesomeIcon icon={faBars} size={menuIconSize} color='white'/>
     
     return (
         <header>
             <Link to='/'><h1 className='logo'>HunterMains</h1></Link>
             <nav>
-                <span className='menu-toggle'>
-                    <div className='menu-toggle-icon'></div>
-                </span>
-                <ul className='nav-links'>
+                <button 
+                    name='toggle-nav' 
+                    onClick={event => handleClick(event)}                   
+                    className={menuToggleClass}
+                >
+                    <span className='menu-toggle-icon'>
+                        {menuIcon}
+                    </span>
+                </button>
+                <ul className={navClass}>
                     <Link to='/about'><li className='nav-links-link'>About Us</li></Link>
                     <li>
                         <button className='nav-links-link toggle-desktop' name='toggle-nav' onClick={event => handleClick(event)}>

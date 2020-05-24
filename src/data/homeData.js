@@ -1,5 +1,5 @@
 // hero section text
-const heroText = 'No more getting carried, Become the carry. Make the Hunters proud!'
+const heroText = 'No more getting carried, Become the carry.'
 const hero = require('../images/home-hero.jpg')
 
 // all information to display in the intro section of the home page
@@ -28,7 +28,7 @@ const builds = {
     id: 3,
     path: 'builds',
     heading: 'Builds',
-    text: 'Create and optimize and build by grinding gear as efficiently as possible.',
+    text: 'Create, optimize and build up gearsets by grinding gear as efficiently as possible.',
     icon: 'faHammer'
 }
 

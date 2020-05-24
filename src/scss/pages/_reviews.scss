@@ -1,14 +1,15 @@
 .reviews {
     &-hero {
-        margin: 0 0 4em 0;
-        height: 700px;
         width: 100%;
         position: relative;
-
+        background-color: var(--clr-blue);
+        
+        
         &-image {
             background-repeat: no-repeat;
             object-fit: cover;
-            height: 100%;
+            height: auto;
+            max-height: 700px;
             width: 100%;
             opacity: 0.6;
         }
@@ -23,20 +24,32 @@
             transform: translate(-50%, -50%);
 
             &-heading {
-                margin-bottom: 1rem;
+                font-size: calc(20px + (52 - 14) * ((100vw - 300px) / (1600 - 300)));
                 text-transform: uppercase;
             }
-
+            
             &-subheading {
-                font-size: 1.25rem;
+                font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
             }
         }
+    }
+    
+    &-block {
+        background-color: var(--clr-blue);
+        width: 100%;
+        padding: 1em 0 4em 0;
     }
 
     &-slides {
         width: 75%;
-        margin: 4em auto;
+        margin: 2em auto 0 auto;
         border: solid var(--clr-accent) 2px;
         padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .reviews-slides {
+        width: 90%;
     }
 }

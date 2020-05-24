@@ -63,19 +63,24 @@ function About() {
             <div className='about-video'>
                 <div className='about-video-text-block'>
                     <h2 className='about-video-text'>
-                        Don't know what to expect? Well check out this 18 minute video to see what kind of content you can expect here at HunterMains.
+                        Don't know what to expect?
+                    </h2>
+                    <h2 className='about-video-text'>
+                        Here's an example of what we offer at HunterMains.
                     </h2>
                 </div>
-                <iframe
-                    className='about-video-embed'
-                    width="800" 
-                    height="450" 
-                    src="https://www.youtube.com/embed/l-BhM2Al1Yg" 
-                    frameborder="0" 
-                    //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                    title='about-embed'
-                />
+                <div className='about-video-block'>
+                    <iframe
+                        className='about-video-embed'
+                        width="800" 
+                        height="450" 
+                        src="https://www.youtube.com/embed/l-BhM2Al1Yg" 
+                        frameBorder="0" 
+                        //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen
+                        title='about-embed'
+                    />
+                </div>
             </div>
 
             <div className='about-team'>

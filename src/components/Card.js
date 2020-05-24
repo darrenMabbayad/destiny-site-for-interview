@@ -7,16 +7,16 @@ import { faHammer } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 function Card({ heading, text, btnText, btnPath, hasButton, icon, img }) {
-    const fundamentalsIcon = <FontAwesomeIcon icon={faBook} size='4x'color='black'/>
-    const exoticsIcon = <FontAwesomeIcon icon={faTools} size='4x'color='black'/>
-    const buildsIcon = <FontAwesomeIcon icon={faHammer} size='4x'color='black'/>
-    const trialsIcon = <FontAwesomeIcon icon={faEye} size='4x'color='black'/>
-    const overlayColor = '#FFCE1F'
-    const secondaryColor = '#C8C8C8'
+    const iconSize = '2x'
+    const fundamentalsIcon = <FontAwesomeIcon icon={faBook} size={iconSize} color='black'/>
+    const exoticsIcon = <FontAwesomeIcon icon={faTools} size={iconSize} color='black'/>
+    const buildsIcon = <FontAwesomeIcon icon={faHammer} size={iconSize} color='black'/>
+    const trialsIcon = <FontAwesomeIcon icon={faEye} size={iconSize} color='black'/>
+    const overlayColor = '#C8C8C8'
 
     const backgroundStyles = {
         background: `url(${img})`,
-        backgroundColor: secondaryColor,
+        backgroundColor: overlayColor,
         backgroundBlendMode: 'overlay',
         backgroundSize: 'cover',
     }

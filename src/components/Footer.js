@@ -7,7 +7,7 @@ function Footer() {
         <footer>
             <div className='footer'>
                 <div className='footer-content'>
-                    <h1 className='footer-logo'>HunterMains</h1>
+                    <h3 className='footer-heading'>HunterMains</h3>
                     <p className='footer-info'>
                         <strong className='footer-info-strong'>Accept no carry service. </strong><br />
                         <strong className='footer-info-strong'>Persevere </strong> 

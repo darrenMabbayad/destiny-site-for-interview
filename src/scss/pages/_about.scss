@@ -1,27 +1,27 @@
 .about {
     &-hero {
-        margin: 0 0 4em 0;
-        height: 700px;
         width: 100%;
         position: relative;
+        background-color: var(--clr-blue);
 
         &-image {
             background-repeat: no-repeat;
             object-fit: cover;
-            height: 100%;
+            height: auto;
+            max-height: 700px;
             width: 100%;
             opacity: 0.6;
         }
 
         &-text {
             width: 65%;
-            margin: 0 auto;
             text-align: center;
             text-transform: uppercase;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-size: calc(20px + (52 - 14) * ((100vw - 300px) / (1600 - 300)));
         }
     }
 
@@ -30,6 +30,7 @@
         width: 100%;
         height: 800px;
         position: relative;
+        background-color: var(--clr-blue);
 
         &-image {
             background-repeat: no-repeat;
@@ -41,7 +42,7 @@
 
         &-block {
             width: 75%;
-            height: 50%;
+            height: 75%;
             background-color: rgba(0,0,0,0.7);
             border: solid var(--clr-white) 2px;
             margin: 0 auto;
@@ -70,37 +71,39 @@
             &-subheading {
                 text-align: left;
                 font-weight: 900;
-                font-size: 2.5rem;
-                margin-right: 1em;
+                font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+                margin: 0 1em 1em 0;
             }
 
             &-block {
                 &-p {
                     margin-bottom: 1rem;
-                    font-size: 1rem;
+                    font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
                 }
             }
         }
     }
 
     &-principles {
-        margin: 4em 0;
+        margin-bottom: 2em;
 
         &-heading {
             text-align: center;
             margin-bottom: 2rem;
+            color: var(--clr-black);
         }
 
         &-cards {
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
         }
     }
 
     &-team {
-        margin: 0 0 4em 0;
+        margin: 2em 0;
         background-color: var(--clr-white);
         color: var(--clr-black);
         padding-top: 2rem;
@@ -116,7 +119,7 @@
             margin: 0 auto;
             display: grid;
             width: 75%;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
             &-member {
                 &-name {
@@ -144,7 +147,7 @@
 
                 &-links {
                     text-align: center;
-                    width: 50%;
+                    width: 75%;
                     margin: 0 auto 2rem auto;
                     z-index: 1000;
 
@@ -169,18 +172,31 @@
         background-color: var(--clr-white);
         position: relative;
 
+        
+        &-block {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+            width: 75%;
+        }
+        
+        &-embed {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
         &-text {
             color: var(--clr-black);
+            margin-bottom: 1em;
 
             &-block {
                 width: 25%;
                 margin-right: 2rem;
             }
-        }
-
-        &-embed {
-            margin: 4em 0;
-            z-index: 1000;
         }
     }
 }
@@ -197,12 +213,25 @@
 }
 
 @media screen and (max-width: 900px) {
-    .about-video {
-        flex-direction: column;
+    .about {
+        &-intro {
+            &-block {
+                height: 90%;
+                width: 90%;
+            }
 
-        &-text-block {
-            margin: 2rem auto 0 auto;
-            width: 80%;
+            &-text {
+                flex-direction: column;
+            }
+        }
+
+        &-video {
+            flex-direction: column;
+    
+            &-text-block {
+                margin: 2rem auto 0 auto;
+                width: 80%;
+            }
         }
     }
 }

@@ -14,34 +14,39 @@ function Home() {
             <div className='home-hero'>
                 <img className='home-hero-image' src={homeData.hero} alt=''/>
                 <div className='home-hero-block'>
-                    <h1 className='home-hero-text'>{homeData.heroText }</h1>
+                    <h1 className='home-hero-text'>{homeData.heroText}</h1>
                     <div className='home-hero-btn'>
                         <Button text={btnText.letsGo} path='courses' isHashLink={true}/>
                     </div>
                 </div>
             </div>
 
-            <div className='home-intro'>
-                <h1 className='home-intro-heading'>{homeData.introHeading}</h1>
-                <div>
-                    <p className='home-intro-subheading'>{homeData.introSubHeading}</p>
-                    <p className='home-intro-text'>{homeData.introText}</p>
+            <div className='home-intro-block'>
+                <div className='home-intro'>
+                    <h1 className='home-intro-heading'>{homeData.introHeading}</h1>
+                    <div>
+                        <p className='home-intro-subheading'>{homeData.introSubHeading}</p>
+                        <p className='home-intro-text'>{homeData.introText}</p>
+                    </div>
                 </div>
             </div>
 
-            <div className='home-stats'>
-                <p className='home-stats-text'>Over <br />
-                    <strong className='home-stats-strong'> 1,000,000 </strong><br />
-                    hunters playing Destiny
-                </p>
-                <p className='home-stats-text'>The most <br />
-                    <strong className='home-stats-strong'> popular </strong><br /> 
-                    class in the game
-                </p>
-                <p className='home-stats-text'>With the most <br />
-                    <strong className='home-stats-strong'> fashionable </strong><br /> 
-                    armor sets available
-                </p>
+
+            <div className='home-stats-block'>
+                <div className='home-stats'>
+                    <p className='home-stats-text'>Over <br />
+                        <strong className='home-stats-strong'> 1,000,000 </strong><br />
+                        hunters playing Destiny
+                    </p>
+                    <p className='home-stats-text'>The most <br />
+                        <strong className='home-stats-strong'> popular </strong><br /> 
+                        class in the game
+                    </p>
+                    <p className='home-stats-text'>With the most <br />
+                        <strong className='home-stats-strong'> fashionable </strong><br /> 
+                        armor sets available
+                    </p>
+                </div>              
             </div>
 
             <div style={backgroundStyles} className='home-courses' id='courses'>
@@ -66,18 +71,21 @@ function Home() {
                 </div>
             </div>
 
-            <div className='home-video'>
-                <iframe    
-                    className='home-video-embed'        
-                    width="800"                
-                    height="450"                
-                    src="https://www.youtube.com/embed/3IhDGd0evwg" 
-                    frameBorder="0" 
-                    //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title='home-embed'
-                />
+            <div className='home-video-block'>
+                <div className='home-video'>
+                    <iframe    
+                        className='home-video-embed'        
+                        width="800"                
+                        height="450"                
+                        src="https://www.youtube.com/embed/3IhDGd0evwg" 
+                        frameBorder="0" 
+                        //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title='home-embed'
+                    />
+                </div>
             </div>
+
 
             <div style={backgroundStyles} className='home-reviews'>
                 <div>

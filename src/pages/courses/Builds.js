@@ -4,6 +4,7 @@ function Builds() {
     const containerStyles = {
         position: 'relative',
         height: '60vh',
+        backgroundColor: '#12171C'
     }
     const pendingStyles = {
         textAlign: 'center',

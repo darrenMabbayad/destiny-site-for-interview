@@ -3,10 +3,11 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin: 4em 0;
+    margin: 2em 0;
 
     &-image {
         width: 35%;
+        margin-bottom: 2rem;
 
         &-src {
             object-fit: cover;
@@ -18,12 +19,12 @@
         position: relative;
 
         &-heading {
-            font-size: 1.75rem;
+            font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
             margin-bottom: 1rem;
         }
 
         &-description {
-            font-size: 1rem;
+            font-size: calc(12px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
             margin-bottom: 1rem;
         }
 
@@ -33,7 +34,21 @@
             border-top: solid var(--clr-accent) 1px;
             width: 50%;
             position: absolute;
-            bottom: -1.75rem;
+            bottom: -0.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .slide {
+        flex-direction: column;
+
+        &-image {
+            width: 90%;
+        }
+
+        &-text {
+            width: 90%;
         }
     }
 }

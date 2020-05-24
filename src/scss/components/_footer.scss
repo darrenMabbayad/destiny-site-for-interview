@@ -3,6 +3,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     position: relative;
+    background-color: var(--clr-blue);
 
     &::before {
         content: '';
@@ -28,10 +29,10 @@ footer {
 
     &-info {
         font-weight: 900;
-        font-size: 1.5rem;
-        width: 100%;
+        font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
         &-strong {
+            font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
             color: var(--clr-accent);
             text-transform: uppercase;
         }
@@ -49,15 +50,21 @@ footer {
 
     &-heading {
         margin-bottom: 1em;
-    }
-
-    &-logo {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: -0.25rem;
+            left: 0;
+            border-bottom: solid var(--clr-accent) 1px;
+        }
     }
 
     &-content {
-        margin: 0 auto;
-        width: max-content;
+        //margin: 0 auto;
+        width: 90%;
+        margin-bottom: 1rem;
     }
 }

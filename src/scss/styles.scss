@@ -27,11 +27,11 @@ a {
 }
 
 body {
-    background: var(--clr-body);
+    background: var(--clr-white);
     color: var(--clr-white);
     margin: 0;
     font-family: var(--ff-primary);
-    font-size: var(--fs-body);
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     line-height: 1.6;
 }
 
@@ -47,7 +47,7 @@ h1, h2, h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
-p { font-size: var(--fs-body) }
+// h1 { font-size: var(--fs-h1) }
+// h2 { font-size: var(--fs-h2) }
+// h3 { font-size: var(--fs-h3) }
+// p { font-size: var(--fs-body) }
