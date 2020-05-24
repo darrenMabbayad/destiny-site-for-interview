@@ -30,7 +30,7 @@ function Accredidation() {
                         target='_blank' 
                         rel="noopener noreferrer"
                     >
-                        Axis Studios Group
+                        Axis Studios Group.
                     </a>
                 </p>
 
