@@ -1,5 +1,5 @@
 export default {
-    letsGo: 'Let\'s Go',
+    letsGo: 'Fight, Guardian!',
     viewCourse: 'View Course',
     readMore: 'Read More'
 }

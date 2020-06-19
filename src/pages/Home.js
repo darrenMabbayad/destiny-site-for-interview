@@ -51,7 +51,7 @@ function Home() {
 
             <div style={backgroundStyles} className='home-courses' id='courses'>
                 <h1 className='home-courses-heading'>The Guardian School</h1>
-                <p className='home-courses-subheading'>Hunters are the only true guardians</p>
+                <p className='home-courses-subheading'>Learn from the ground up</p>
                 <div className='home-courses-cards'>
                     { 
                         homeData.courses.map(course => {
