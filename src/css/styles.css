@@ -331,7 +331,7 @@ footer::before {
   color: var(--clr-black);
   margin: 1em;
   padding: 1em 0;
-  min-width: 250px;
+  min-width: 200px;
   max-height: 600px;
   margin: 0 auto;
   display: -webkit-box;
@@ -365,12 +365,12 @@ footer::before {
 
 .card-heading-type2 {
   text-align: right;
-  margin-right: 1rem;
+  margin-right: 2rem;
   color: white;
 }
 
 .card-text {
-  width: 75%;
+  width: 85%;
   margin: 0 auto 1em auto;
   text-align: left;
   z-index: 1000;
@@ -379,9 +379,15 @@ footer::before {
 }
 
 .card-text-type2 {
+  width: 100%;
+  margin: 0;
   text-align: left;
   color: white;
   font-weight: 300;
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: textblock;
 }
 
 .card-button {
@@ -398,39 +404,90 @@ footer::before {
 }
 
 .card-type2-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'textblock items' 'stats items';
+  gap: 1em;
+  padding: 0 2rem;
   margin-bottom: 1rem;
 }
 
 .destiny2-item {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
   border: solid var(--clr-accent) 2px;
+}
+
+.destiny2-item-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: items;
 }
 
 .destiny2-item:not(:last-of-type) {
   margin-bottom: 1rem;
 }
 
-.type2 {
-  min-height: 325px;
+.stat-icon img {
+  width: 30px;
+  height: 30px;
 }
 
-@media screen and (max-width: 899px) {
+.stat-icon-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: stats;
+}
+
+.stat-icon-container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stat-icon-container-flex:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.stat-icon-value {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.stat-icon:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.type2 {
+  min-height: 350px;
+  min-width: 250px;
+}
+
+@media screen and (max-width: 1200px) {
   .destiny2-item {
     width: 50px;
     height: 50px;
     margin: 0;
   }
-  .card-text-type2 {
-    width: 50%;
-    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .stat-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  .stat-icon-value {
+    font-weight: 400;
+    font-size: 12px;
   }
 }
 
@@ -625,6 +682,11 @@ footer::before {
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1em;
+}
+
+.home-reviews-cards {
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .home-video {

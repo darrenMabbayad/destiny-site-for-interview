@@ -104,6 +104,7 @@ function Home() {
                                     kineticWep={review.kinetic}
                                     specialWep={review.special}
                                     powerWep={review.power}
+                                    stats={review.stats}
                                     btnText={btnText.readMore}
                                     btnPath={review.path}
                                     hasButton={true}
