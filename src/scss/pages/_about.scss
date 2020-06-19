@@ -124,13 +124,12 @@
             &-member {
                 &-name {
                     text-align: center;
-                    margin-bottom: 1rem;
                     z-index: 1000;
                 }
 
                 &-logo {
-                    width: 150px;
-                    height: 150px;
+                    width: 100px;
+                    height: 100px;
                     border-radius: 50%;
                     border: solid var(--clr-white) 2px;
                     margin: 0 auto 1rem auto;
@@ -140,9 +139,10 @@
 
                 &-description {
                     text-align: center;
-                    margin-bottom: 1rem;
                     color: var(--clr-accent);
                     z-index: 1000;
+                    font-weight: 400;
+                    font-size: 1.25rem;
                 }
 
                 &-links {
@@ -205,9 +205,13 @@
     }
 }
 
+.about-team-info-member:not(:last-of-type) {
+    border-right: solid black 1px;
+}
+
 .team-socials-icon {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     transition: all 0.3s linear;
 
     &:hover {

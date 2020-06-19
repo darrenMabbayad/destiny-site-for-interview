@@ -49,7 +49,10 @@ const review1 = {
     path: 'reviews',
     heading: 'Gamefire',
     subheading: 'Punchy Titan',
-    text: 'I recently created a Hunter and now I can\'t go back... No more punchies, no more charges, no more Titan!'
+    text: 'I recently created a Hunter and now I can\'t go back... No more punchies, no more charges, no more Titan!',
+    kinetic: '/common/destiny2_content/icons/7106d949c81a1b2b281964ae2184d6b2.jpg',
+    special: '/common/destiny2_content/icons/276359d16a70dad38c6b1e196dfa097b.jpg',
+    power: '/common/destiny2_content/icons/b95e68c761e400c2fe5cf3c46999d689.jpg'
 }
 
 const review2 = {
@@ -58,7 +61,10 @@ const review2 = {
     path: 'reviews',
     heading: 'Kilroy',
     subheading: 'New to the Game',
-    text: 'These courses really taught me how to get a foothold in the Crucible! Really well thought out guides on PVP with great content creators.'
+    text: 'These courses really taught me how to get a foothold in the Crucible! Really well thought out guides on PVP with great content creators.',
+    kinetic: '/common/destiny2_content/icons/7106d949c81a1b2b281964ae2184d6b2.jpg',
+    special: '/common/destiny2_content/icons/276359d16a70dad38c6b1e196dfa097b.jpg',
+    power: '/common/destiny2_content/icons/b95e68c761e400c2fe5cf3c46999d689.jpg'
 }
 
 const review3 = {
@@ -67,7 +73,10 @@ const review3 = {
     path: 'reviews',
     heading: 'Appleches',
     subheading: 'Toxic Guardian',
-    text: 'I\'ve gone from a sub 50% winrate to a 65% winrate and I\'m more levelheaded in game.'
+    text: 'I\'ve gone from a sub 50% winrate to a 65% winrate and I\'m more levelheaded in game.',
+    kinetic: '/common/destiny2_content/icons/7106d949c81a1b2b281964ae2184d6b2.jpg',
+    special: '/common/destiny2_content/icons/276359d16a70dad38c6b1e196dfa097b.jpg',
+    power: '/common/destiny2_content/icons/b95e68c761e400c2fe5cf3c46999d689.jpg'
 }
 
 const reviews = [review1, review2, review3]

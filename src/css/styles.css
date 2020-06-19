@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 :root {
-  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-primary: 'Open Sans', sans-serif;
   --fw-reg: 300;
   --fw-specific: 400;
   --fw-bold: 900;
@@ -9,21 +9,8 @@
   --clr-blue: #12171C;
   --clr-accent: #C78A33;
   --clr-overlay: #FFCE1F;
-  --fs-h1: 1.5rem;
-  --fs-h2: 1.625rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 0.75rem;
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
-}
-
-@media (min-width: 800px) {
-  :root {
-    --fs-h1: 3.75rem;
-    --fs-h2: 2.75rem;
-    --fs-h3: 1.75rem;
-    --fs-body: 1.125rem;
-  }
 }
 
 header {
@@ -344,7 +331,7 @@ footer::before {
   color: var(--clr-black);
   margin: 1em;
   padding: 1em 0;
-  min-width: 200px;
+  min-width: 250px;
   max-height: 600px;
   margin: 0 auto;
   display: -webkit-box;
@@ -365,26 +352,36 @@ footer::before {
           box-shadow: 3px 6px 5px 6px rgba(0, 0, 0, 0.1), 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.card-icon {
+  text-align: center;
+}
+
 .card-heading {
   margin-bottom: 0.5em;
   text-align: center;
   z-index: 1000;
+  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .card-heading-type2 {
   text-align: right;
   margin-right: 1rem;
+  color: white;
 }
 
 .card-text {
-  width: 85%;
+  width: 75%;
   margin: 0 auto 1em auto;
   text-align: left;
   z-index: 1000;
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
 }
 
 .card-text-type2 {
   text-align: left;
+  color: white;
+  font-weight: 300;
 }
 
 .card-button {
@@ -398,6 +395,43 @@ footer::before {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1000;
+}
+
+.card-type2-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.destiny2-item {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+  border: solid var(--clr-accent) 2px;
+}
+
+.destiny2-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.type2 {
+  min-height: 325px;
+}
+
+@media screen and (max-width: 899px) {
+  .destiny2-item {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+  .card-text-type2 {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 .slide {
@@ -762,13 +796,12 @@ footer::before {
 
 .about-team-info-member-name {
   text-align: center;
-  margin-bottom: 1rem;
   z-index: 1000;
 }
 
 .about-team-info-member-logo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: solid var(--clr-white) 2px;
   margin: 0 auto 1rem auto;
@@ -778,9 +811,10 @@ footer::before {
 
 .about-team-info-member-description {
   text-align: center;
-  margin-bottom: 1rem;
   color: var(--clr-accent);
   z-index: 1000;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
 .about-team-info-member-links {
@@ -851,9 +885,13 @@ footer::before {
   margin-right: 2rem;
 }
 
+.about-team-info-member:not(:last-of-type) {
+  border-right: solid black 1px;
+}
+
 .team-socials-icon {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }

@@ -1,5 +1,5 @@
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-primary: 'Open Sans', sans-serif;
     
     --fw-reg: 300;
     --fw-specific: 400;
@@ -11,20 +11,20 @@
     --clr-accent: #C78A33;
     --clr-overlay: #FFCE1F;
     
-    --fs-h1: 1.5rem;
-    --fs-h2: 1.625rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 0.75rem;
+    // --fs-h1: 1.5rem;
+    // --fs-h2: 1.625rem;
+    // --fs-h3: 1.25rem;
+    // --fs-body: 0.75rem;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
-@media (min-width: 800px) {
-    :root {
-        --fs-h1: 3.75rem;
-        --fs-h2: 2.75rem;
-        --fs-h3: 1.75rem;
-        --fs-body: 1.125rem;
-    }
-}
+// @media (min-width: 800px) {
+//     :root {
+//         --fs-h1: 3.5rem;
+//         --fs-h2: 2.5rem;
+//         --fs-h3: 1.5rem;
+//         --fs-body: 1.125rem;
+//     }
+// }

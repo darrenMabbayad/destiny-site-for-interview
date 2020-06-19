@@ -100,10 +100,13 @@ function Home() {
                                     key={review.id}
                                     heading={review.heading}
                                     text={review.text}
+                                    img={review.img}
+                                    kineticWep={review.kinetic}
+                                    specialWep={review.special}
+                                    powerWep={review.power}
                                     btnText={btnText.readMore}
                                     btnPath={review.path}
                                     hasButton={true}
-                                    img={review.img}
                                 />
                             )
                         })

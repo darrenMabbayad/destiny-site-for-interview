@@ -4,7 +4,7 @@
     color: var(--clr-black);
     margin: 1em;
     padding: 1em 0;
-    min-width: 200px;
+    min-width: 250px;
     max-height: 600px;
     margin: 0 auto;
     display: flex;
@@ -15,25 +15,35 @@
     box-shadow: 3px 6px 5px 6px rgba(0,0,0,0.1),
                 1px 1px 2px 2px rgba(0,0,0,0.2);
 
+    &-icon {
+        text-align: center;
+    }
+
     &-heading {
         margin-bottom: 0.5em;
         text-align: center;
         z-index: 1000;
+        font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
 
         &-type2 {
             text-align: right;
             margin-right: 1rem;
+            color: white;
         }
     }
 
     &-text {
-        width: 85%;
+        width: 75%;
         margin: 0 auto 1em auto;
         text-align: left;
         z-index: 1000;
+        font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+        font-weight: 300;
 
         &-type2 {
             text-align: left;
+            color: white;
+            font-weight: 300;
         }
     }
 
@@ -42,5 +52,39 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
+    }
+
+    &-type2-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+    }
+}
+
+.destiny2-item {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    border: solid var(--clr-accent) 2px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 1rem;
+    }
+}
+
+.type2 {
+    min-height: 325px;
+}
+
+@media screen and (max-width: 899px) {
+    .destiny2-item {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .card-text-type2 {
+        width: 50%;
+        margin: 0;
     }
 }

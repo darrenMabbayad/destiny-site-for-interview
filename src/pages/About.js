@@ -1,16 +1,10 @@
 import React from 'react'
 import aboutData from '../data/aboutData'
 import Card from '../components/Card'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
-import { faTwitch } from '@fortawesome/free-brands-svg-icons'
 import introBg from '../images/trials-logo.jpg'
-
+import TeamMemberInfo from '../components/TeamMemberInfo'
 
 function About() {
-    const iconColor = 'black'
-
     return (
         <div className='about'>
             <div className='about-hero'>
@@ -89,63 +83,7 @@ function About() {
                 <h1 className='about-team-heading'>Meet the Team</h1>
                 <div className='about-team-info'>
                     {
-                        aboutData.team.map(member => {
-                            return (
-                                <div key={member.id} className='about-team-info-member'>
-                                    <h2 className='about-team-info-member-name'>{member.name}</h2>
-                                    <img className='about-team-info-member-logo'src={member.logo} alt=''/>
-                                    <h3 className='about-team-info-member-description'>{member.description}</h3>
-                                    <div className='about-team-info-member-links'>
-                                        <ul>
-                                            <li>
-                                                <a 
-                                                    href={member.youtube} 
-                                                    target='_blank' 
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <FontAwesomeIcon 
-                                                        className='team-socials-icon'
-                                                        icon={faYoutubeSquare} 
-                                                        size='2x'
-                                                        color={iconColor}
-                                                    />
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a 
-                                                    href={member.twitter} 
-                                                    target='_blank' 
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <FontAwesomeIcon 
-                                                        className='team-socials-icon'
-                                                        icon={faTwitter} 
-                                                        size='2x'
-                                                        color={iconColor}
-                                                    />
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a 
-                                                    href={member.twitch} 
-                                                    target='_blank' 
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <FontAwesomeIcon 
-                                                        className='team-socials-icon'
-                                                        icon={faTwitch} 
-                                                        size='2x'
-                                                        color={iconColor}
-                                                    />
-                                                </a>
-                                            </li>
-                                        </ul>                                 
-                                    </div>
-                                </div>
-                            )
-                        })
+                        aboutData.team.map(member => <TeamMemberInfo member={member}/>)
                     }
                 </div>
             </div>
