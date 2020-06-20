@@ -86,7 +86,6 @@ function Home() {
                 </div>
             </div>
 
-
             <div style={backgroundStyles} className='home-reviews'>
                 <div>
                     <h1 className='home-reviews-heading'>Flawless Hunters</h1>

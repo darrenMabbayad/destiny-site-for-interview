@@ -17,6 +17,7 @@ function Footer() {
                 <div className='footer-content'>
                     <h3 className='footer-heading'>Navigation</h3>
                     <ul>
+                        <Link to='/'><li className='footer-link'>Home</li></Link>
                         <Link to='/accredidation'><li className='footer-link'>Accredidation</li></Link>
                         <Link to='/about'><li className='footer-link'>About Us</li></Link>
                         <Link to='/reviews'><li className='footer-link'>Reviews</li></Link>

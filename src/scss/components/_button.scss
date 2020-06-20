@@ -1,6 +1,7 @@
 .generic-btn {
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 900;
+    height: 100%;
     border: none;
     text-transform: uppercase;
     margin: 0.5em;

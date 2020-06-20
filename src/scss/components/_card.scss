@@ -120,6 +120,8 @@
 .type2 {
     min-height: 350px;
     min-width: 250px;
+    border: none;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -141,5 +143,30 @@
             font-weight: 400;
             font-size: 12px;
         }
+
+        &-container-flex {
+            justify-content: space-evenly;
+        }
+    }
+
+    .card-type2-info {
+        grid-template-areas:
+        'textblock'
+        'items'
+        'stats';
+    }
+
+    .destiny2-item:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+
+    .destiny2-item-container > :first-child {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .card-text-type2 {
+        width: 80%;
+        margin: 0 auto;
     }
 }

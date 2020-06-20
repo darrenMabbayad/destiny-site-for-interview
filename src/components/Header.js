@@ -25,13 +25,13 @@ function Header({ handleClick }) {
                     </span>
                 </button>
                 <ul className={navClass}>
-                    <Link to='/about'><li className='nav-links-link'>About Us</li></Link>
-                    <li>
+                    <li className='nav-links-link'><Link to='/about'>About Us</Link></li>
+                    <li className='nav-links-link'>
                         <button className='nav-links-link toggle-desktop' name='toggle-nav' onClick={event => handleClick(event)}>
                             Guardian School
                         </button>
                     </li>
-                    <Link to='/reviews'><li className='nav-links-link'>Reviews</li></Link>
+                    <li className='nav-links-link'><Link to='/reviews'>Reviews</Link></li>
                 </ul>
             </nav> 
         </header>
