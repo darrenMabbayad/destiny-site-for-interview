@@ -84,7 +84,6 @@
 }
 
 .stat-icon {
-
     img {
         width: 30px;
         height: 30px;
@@ -144,8 +143,12 @@
             font-size: 12px;
         }
 
-        &-container-flex {
-            justify-content: space-evenly;
+        &-container {
+            grid-area: stats;
+
+            &-flex {
+                justify-content: space-evenly;
+            }
         }
     }
 
@@ -154,6 +157,10 @@
         'textblock'
         'items'
         'stats';
+    }
+
+    .destiny2-item-container {
+        grid-area: items;
     }
 
     .destiny2-item:not(:last-of-type) {
@@ -168,5 +175,6 @@
     .card-text-type2 {
         width: 80%;
         margin: 0 auto;
+        grid-area: textblock;
     }
 }

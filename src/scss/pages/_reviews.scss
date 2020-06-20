@@ -22,6 +22,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-weight: 300;
 
             &-heading {
                 font-size: calc(20px + (52 - 14) * ((100vw - 300px) / (1600 - 300)));

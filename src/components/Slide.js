@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Slide({ image, heading, description, isFlipped}) {
+function Slide({ image, heading, description, isFlipped }) {
     return (
         <>
             {

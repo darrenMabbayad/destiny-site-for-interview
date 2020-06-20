@@ -19,16 +19,17 @@ function Reviews() {
             <div className='reviews-block'>
                 <div className='reviews-slides'>
                     {
-                        reviewsData.reviews.map((review, index) => {
+                        reviewsData.reviews.map(review => {
                             let isFlipped = false
                             if (review.id % 2 === 0 && !unFlipSlideForMobile) isFlipped = true
                             return (
                                 <Slide 
-                                    key={index}
+                                    key={review.id}
                                     image={review.image}
                                     heading={review.heading}
                                     description={review.description}
                                     isFlipped={isFlipped}
+                                    hashPath={review.id}
                                 />
                             )
                         })
